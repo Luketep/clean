@@ -1,2 +1,1 @@
-# clean
-clean setup to start building web apps
+Simple setup to start creating web apps with Node & Express

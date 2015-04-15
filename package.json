@@ -1,0 +1,27 @@
+{
+  "name": "clean",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Philip Hoedtke <philiphoedtke@goolgemail.com>",
+  "contributors": [
+    {
+    }
+  ],
+  "bin": {
+  },
+  "scripts": {
+  },
+  "main": "",
+  "repository": {
+  },
+  "bugs": {
+  },
+  "keywords": [],
+  "dependencies": {
+    "express": "*"
+  },
+  "devDependencies": {
+  },
+  "license": "",
+  "private": true
+}
