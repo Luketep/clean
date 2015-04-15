@@ -3,10 +3,16 @@
 
 var express = require('express'),
     app = express(),
-    server = require('http').createServer(app)
+    server = require('http').createServer(app),
+    port = 5555,
+    exampleModule = require('./modules/example.js')
 ;
 
-server.listen(5555);
+console.log('%s loaded', exampleModule);
+
+server.listen(port);
+
+console.log('Server started and listening to port %d', port);
 
 app.use(express.static(__dirname + '/public'));
 
