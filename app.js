@@ -8,7 +8,7 @@ var express = require('express'),
 
 server.listen(5555);
 
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function AppRouteRoot(req, res) {
 	'use strict';
