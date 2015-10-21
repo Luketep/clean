@@ -14,7 +14,7 @@ server.listen(port);
 
 console.log('Server started and listening to port %d', port);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/target'));
 
 app.get('/', function AppRouteRoot(req, res) {
 	'use strict';

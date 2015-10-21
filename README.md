@@ -4,6 +4,8 @@ Installation:
 ```sh
 $ git clone https://github.com/luketep/clean.git && cd clean
 $ npm install
+$ nom install -g gulp
+$ gulp watch
 $ node app.js
 ```
 
@@ -13,7 +15,7 @@ The folder structure:
 
     root/
         modules/
-        public/
+        src/
             css/
                 libs/
                     bootstrap.min.css
@@ -33,8 +35,12 @@ The folder structure:
                     underscore-min.map
                 app.js
                 configuration.js
-            templates/
+            resources/
+                favicon.ico
             index.html
         app.js
+        CHANGELOG.md
+        gulpfile.js
         package.json
-        Readme.md
+        README.md
+        WTFPL.md

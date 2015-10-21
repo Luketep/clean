@@ -1,6 +1,6 @@
 {
   "name": "clean",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "author": "Philip Hoedtke <philiphoedtke@goolgemail.com>",
   "contributors": [
@@ -18,10 +18,14 @@
   },
   "keywords": [],
   "dependencies": {
-    "express": "*"
+		"express": "4.13.3",
+		"gulp": "3.9.0",
+		"gulp-babel": "5.3.0",
+		"gulp-clean": "0.3.1",
+		"gulp-sourcemaps": "1.6.0"
   },
   "devDependencies": {
   },
-  "license": "",
-  "private": true
+  "license": "WTFPL",
+  "private": false
 }
