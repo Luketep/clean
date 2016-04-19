@@ -8,6 +8,6 @@ function configurationLoaded() {
 		'bootstrap'
 	],
 	function appLoaded() {
-		// App is loaded, start coding here
+		console.info('// App is loaded, start coding here');
 	});
 });
