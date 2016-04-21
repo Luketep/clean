@@ -17,24 +17,10 @@ The folder structure:
         modules/
         src/
             css/
-                libs/
-                    bootstrap.min.css
-                starter-template.css
                 site.css
             js/
-                libs/
-                    backbone-min.js
-                    backbone-min.map
-                    bootstrap-min.js
-                    jquery-min.js
-                    json2-min.js
-                    mustache.js
-                    require-min.js
-                    text.js
-                    underscore-min.js
-                    underscore-min.map
-                app.js
-                configuration.js
+                App.js
+                main.js
             resources/
                 favicon.ico
             index.html

@@ -1,7 +1,7 @@
 // MODULES
 var gulp = require('gulp');
 var browserify = require('browserify');
-var babelify= require('babelify');
+var babelify = require('babelify');
 var util = require('gulp-util');
 var buffer = require('vinyl-buffer');
 var source = require('vinyl-source-stream');
@@ -34,6 +34,8 @@ var paths = {
 		javascript: 'target/js'
 	}
 };
+// SET UP ENVIRONMENT
+process.env.NODE_ENV = 'production';
 // GULP TASKS
 gulp.task('clean', function(){
 	return gulp.src(paths.targetFolder, {
@@ -49,7 +51,7 @@ gulp.task('build', function() {
 		.transform(babelify, {})
 		.bundle()
 		.on('error', util.log.bind(util, 'Browserify Error'))
-		.pipe(source('main.js'))
+		.pipe(source('build.js'))
 		.pipe(buffer())
 		.pipe(sourcemaps.init({
 			loadMaps: true

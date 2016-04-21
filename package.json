@@ -1,24 +1,21 @@
 {
-  "name": "clean",
-  "version": "0.2.0",
+  "name": "clean-react",
+  "version": "0.3.0",
   "description": "",
   "author": "Philip Hoedtke <philiphoedtke@goolgemail.com>",
   "contributors": [
-    {
-    }
+    {}
   ],
-  "bin": {
-  },
-  "scripts": {
-  },
+  "bin": {},
+  "scripts": {},
   "main": "",
-  "repository": {
-  },
-  "bugs": {
-  },
+  "repository": {},
+  "bugs": {},
   "keywords": [],
   "dependencies": {
-    "express": "4.13.4"
+    "express": "4.13.4",
+    "react": "15.0.1",
+    "react-dom": "15.0.1"
   },
   "devDependencies": {
     "babel": "6.5.2",

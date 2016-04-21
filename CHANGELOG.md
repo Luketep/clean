@@ -1,3 +1,9 @@
+# version 0.3.0
+- removed standard js libs
+- added react and react-dom as node modules
+- updated build process
+- cleaned index.html
+
 # version 0.2.0
 - update gulp process to bundle js files
 - added ESLint

@@ -1,3 +1,5 @@
-import App from 'App';
+import App from './App';
 
-const app = new App();
+window.addEventListener('load', () => {
+    new App().render();    
+});
