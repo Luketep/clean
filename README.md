@@ -1,4 +1,4 @@
-### Simple setup to start creating web apps with Node & Express
+### Simple setup to start creating web apps with Node, Express and React
 
 Installation:
 ```sh
