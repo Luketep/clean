@@ -2,9 +2,10 @@
 
 Installation:
 ```sh
-$ git clone https://github.com/luketep/clean.git && cd clean
+$ git clone https://github.com/luketep/clean.git clean-react && cd clean-react
+$ git checkout clean-react
+$ nim install -g gulp
 $ npm install
-$ nom install -g gulp
 $ gulp watch
 $ node app.js
 ```
