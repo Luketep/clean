@@ -11,6 +11,10 @@ $ node app.js
 
 You can now access the server at http://localhost:5555/
 
+CSS:
+- site.css : your custom css for your app
+- starter-template.css : bootstrap starter template
+
 The folder structure:
 
     root/

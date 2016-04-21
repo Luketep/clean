@@ -1,3 +1,6 @@
+# version 0.1.1
+- added description for css files
+
 # Version 0.1.0
 - added gulp
 - added babel to enable coding in ES6
