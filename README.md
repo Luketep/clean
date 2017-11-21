@@ -1,10 +1,11 @@
-### Simple setup to start creating web apps with Node & Express
+### Simple setup to start creating web apps with Node, Express and React
 
 Installation:
 ```sh
-$ git clone https://github.com/luketep/clean.git && cd clean
+$ git clone https://github.com/luketep/clean.git clean-react && cd clean-react
+$ git checkout clean-react
+$ nim install -g gulp
 $ npm install
-$ nom install -g gulp
 $ gulp watch
 $ node app.js
 ```
@@ -21,24 +22,10 @@ The folder structure:
         modules/
         src/
             css/
-                libs/
-                    bootstrap.min.css
-                starter-template.css
                 site.css
             js/
-                libs/
-                    backbone-min.js
-                    backbone-min.map
-                    bootstrap-min.js
-                    jquery-min.js
-                    json2-min.js
-                    mustache.js
-                    require-min.js
-                    text.js
-                    underscore-min.js
-                    underscore-min.map
-                app.js
-                configuration.js
+                App.js
+                main.js
             resources/
                 favicon.ico
             index.html
