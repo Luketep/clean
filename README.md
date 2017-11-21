@@ -1,37 +1,14 @@
 ### Simple setup to start creating web apps with Node, Express and React
 
-Installation:
+This is a repo for working on prototypes without dealing with bootstraping your stack.
+You will not find test integration in this repo as prototypes are meant to be thrown away ;)
+
+# Installation:
 ```sh
-$ git clone https://github.com/luketep/clean.git clean-react && cd clean-react
-$ git checkout clean-react
-$ nim install -g gulp
+$ git clone https://github.com/luketep/clean.git && cd clean
 $ npm install
-$ gulp watch
-$ node app.js
+$ npm run server
+$ npm run watch
 ```
 
 You can now access the server at http://localhost:5555/
-
-CSS:
-- site.css : your custom css for your app
-- starter-template.css : bootstrap starter template
-
-The folder structure:
-
-    root/
-        modules/
-        src/
-            css/
-                site.css
-            js/
-                App.js
-                main.js
-            resources/
-                favicon.ico
-            index.html
-        app.js
-        CHANGELOG.md
-        gulpfile.js
-        package.json
-        README.md
-        WTFPL.md
