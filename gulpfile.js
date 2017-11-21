@@ -1,51 +1,50 @@
-// MODULES
-var gulp = require('gulp');
-var browserify = require('browserify');
-var babelify = require('babelify');
-var util = require('gulp-util');
-var buffer = require('vinyl-buffer');
-var source = require('vinyl-source-stream');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var clean = require('gulp-clean');
-// CONFIGURATION
-var baseSourcePath = './src';
-var paths = {
+const del = require('del');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const util = require('gulp-util');
+const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
+const stylus = require('gulp-stylus');
+const buffer = require('vinyl-buffer');
+const source = require('vinyl-source-stream');
+
+const baseSourcePath = './src';
+const paths = {
 	src: {
 		static: [
-			baseSourcePath + '/index.html',
-			baseSourcePath + '/css/**',
-			baseSourcePath + '/js/libs/**',
-			baseSourcePath + '/resources/**'
+			`${baseSroucePath}/index.html'`,
+			`${baseSroucePath}/resources/**`
 		],
 		javascript: [
-			'!' + baseSourcePath + '/js/libs/**',
-			baseSourcePath + '/js/**/*.js'
+			`${baseSroucePath}/js/**/*.js`
 		],
+		stylus: [
+			`${baseSroucePath}/css/**`
+		]
 	},
 	targetFolder: 'target',
 	target: {
 		static: [
 			'index.html',
-			baseSourcePath + '/css/**/*.css',
-			baseSourcePath + '/js/libs/',
-			baseSourcePath + '/resources/'
+			`${baseSroucePath}/resources/`
 		],
-		javascript: 'target/js'
+		javascript: 'target/js',
+		stylus: 'target/css'
 	}
 };
-// SET UP ENVIRONMENT
+
 process.env.NODE_ENV = 'production';
-// GULP TASKS
-gulp.task('clean', function(){
-	return gulp.src(paths.targetFolder, {
-			read: false
-		})
-		.pipe(clean());
+
+gulp.task('clean', () => {
+	return del(paths.targetFolder).then(paths => {
+		console.log('Deleted files and folders:\n', paths.join('\n'));
+	});
 });
 
-gulp.task('build', function() {
-	return browserify(baseSourcePath + '/js/main.js', {
+gulp.task('build', () => {
+	return browserify(`${baseSourcePath}/js/main.js`, {
 			debug: true
 		})
 		.transform(babelify, {})
@@ -63,16 +62,28 @@ gulp.task('build', function() {
 		.pipe(gulp.dest('./target/js'));
 });
 
-gulp.task('move-static', function() {
+gulp.task('move-static', () => {
 	return gulp.src(paths.src.static, {
-			base: './src'
+			base: baseSourcePath
 		})
 		.pipe(gulp.dest(paths.targetFolder));
 });
 
-gulp.task('watch', ['move-static', 'build'], function() {
-	gulp.watch(paths.src.static, ['move-static']);
-	gulp.watch(paths.src.javascript, ['build']);
+gulp.task('stylus', () => {
+	return gulp.src(paths.src.stylus)
+		.pipe(sourcemaps.init())
+		.pipe(stylus({
+			compress: true
+		}))
+		.pipe(concat('bundle.css'))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(paths.target.stylus));
 });
 
-gulp.task('default', ['move-static', 'build']);
+gulp.task('watch', ['move-static', 'build', 'stylus'], () => {
+	gulp.watch(paths.src.static, ['move-static']);
+	gulp.watch(paths.src.javascript, ['build']);
+	gulp.watch(paths.src.javascript, ['stylus']);
+});
+
+gulp.task('default', ['move-static', 'build', 'stylus']);
