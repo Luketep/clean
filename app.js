@@ -1,22 +1,14 @@
-/*global require*/
-/*global __dirname*/
-
-var express = require('express'),
-    app = express(),
-    server = require('http').createServer(app),
-    port = 5555,
-    exampleModule = require('./modules/example.js')
-;
-
-console.log('%s loaded', exampleModule);
+const express = require('express');
+const app = express();
+const server = require('http').createServer(app);
+const port = 5555;
 
 server.listen(port);
 
 console.log('Server started and listening to port %d', port);
 
-app.use(express.static(__dirname + '/target'));
+app.use(express.static(`${__dirname}/target`));
 
-app.get('/', function AppRouteRoot(req, res) {
-	'use strict';
-    res.sendFile(__dirname + 'index.html');
+app.get('/', (req, res) => {
+    res.sendFile(`${__dirname}/index.html`);
 });

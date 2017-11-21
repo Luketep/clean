@@ -9,7 +9,8 @@
   "bin": {},
   "scripts": {
     "build": "gulp",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "server": "node app.js"
   },
   "main": "",
   "repository": {},
