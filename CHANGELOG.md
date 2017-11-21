@@ -1,3 +1,6 @@
+# version 1.1.0
+- added stylus, redux and react-router-dom
+
 # version 1.0.0
 - merge clean-react branch to abandon old setup
 

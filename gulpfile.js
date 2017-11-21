@@ -14,21 +14,21 @@ const baseSourcePath = './src';
 const paths = {
 	src: {
 		static: [
-			`${baseSroucePath}/index.html'`,
-			`${baseSroucePath}/resources/**`
+			`${baseSourcePath}/index.html`,
+			`${baseSourcePath}/resources/**`
 		],
 		javascript: [
-			`${baseSroucePath}/js/**/*.js`
+			`${baseSourcePath}/js/**/*.js`
 		],
 		stylus: [
-			`${baseSroucePath}/css/**`
+			`${baseSourcePath}/css/**`
 		]
 	},
 	targetFolder: 'target',
 	target: {
 		static: [
 			'index.html',
-			`${baseSroucePath}/resources/`
+			`${baseSourcePath}/resources/`
 		],
 		javascript: 'target/js',
 		stylus: 'target/css'
