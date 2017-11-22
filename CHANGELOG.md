@@ -1,3 +1,6 @@
+# version 1.2.0
+- added PureCSS (https://purecss.io/)
+
 # version 1.1.0
 - added stylus, redux and react-router-dom
 

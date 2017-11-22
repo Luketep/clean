@@ -15,13 +15,15 @@ const paths = {
 	src: {
 		static: [
 			`${baseSourcePath}/index.html`,
+			`${baseSourcePath}/css/libs/**`,
 			`${baseSourcePath}/resources/**`
 		],
 		javascript: [
 			`${baseSourcePath}/js/**/*.js`
 		],
 		stylus: [
-			`${baseSourcePath}/css/**`
+			`${baseSourcePath}/css/**`,
+			`!${baseSourcePath}/css/libs`
 		]
 	},
 	targetFolder: 'target',
