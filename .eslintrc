@@ -22,7 +22,8 @@
         "no-unused-vars": 2,
         "no-console": 0,
         "max-len": [2, 90, 4],
-        "semi": [2, "always"]
+        "semi": [2, "always"],
+        "strict": "never"
     },
     "parser": "babel-eslint",
     "environment": {
@@ -32,5 +33,11 @@
     "settings": {
         "ecmascript": 6,
         "jsx": false
+    },
+    "globals": {
+        "window": true,
+        "Phaser": true,
+        "PIXI": true,
+        "p2": true
     }
 }

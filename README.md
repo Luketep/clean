@@ -1,4 +1,4 @@
-### Simple setup to start creating web apps with Node, Express and React
+### Create games with Phaser CE
 
 This is a repo for working on prototypes without dealing with bootstraping your stack.
 You will not find test integration in this repo as prototypes are meant to be thrown away ;)
@@ -6,6 +6,8 @@ You will not find test integration in this repo as prototypes are meant to be th
 # Installation:
 ```sh
 $ git clone https://github.com/luketep/clean.git && cd clean
+$ git checkout clean-phaser-game
+$ rm -rf .git
 $ npm install
 $ npm run server
 $ npm run watch

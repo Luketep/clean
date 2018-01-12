@@ -46,7 +46,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', () => {
-	return browserify(`${baseSourcePath}/js/main.js`, {
+	return browserify(`${baseSourcePath}/js/index.js`, {
 			debug: true
 		})
 		.transform(babelify, {})
