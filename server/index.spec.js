@@ -1,8 +1,21 @@
-const assert = require('assert');
-const server = require('./index');
+const request = require('supertest');
 
 describe('index', () => {
-  it('should return true', () => {
-    assert(server());
+  let server;
+
+  beforeEach(() => {
+    server = require('./index');
+  });
+
+  afterEach(function () {
+    server.close();
+  });
+
+  it('responds to /', (done) => {
+    request(server).get('/').expect(200, done);
+  });
+
+  it('responds with 404 for non-existing roles', (done) => {
+    request(server).get('/i/dont/exist').expect(404, done);
   });
 });

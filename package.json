@@ -55,6 +55,7 @@
     "nodemon": "1.17.3",
     "sinon": "4.5.0",
     "style-loader": "0.20.3",
+    "supertest": "3.0.0",
     "webpack": "4.5.0",
     "webpack-cli": "2.0.14"
   },
