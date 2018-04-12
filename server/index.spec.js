@@ -7,7 +7,7 @@ describe('index', () => {
     server = require('./index');
   });
 
-  afterEach(function () {
+  afterEach(() => {
     server.close();
   });
 
