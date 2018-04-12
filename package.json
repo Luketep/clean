@@ -1,7 +1,7 @@
 {
-  "name": "sw",
+  "name": "clean",
   "version": "2.0.0",
-  "description": "sw",
+  "description": "clean-webpack-4-mocha-enzyme",
   "main": "index.js",
   "scripts": {
     "build-client": "webpack --mode production",
