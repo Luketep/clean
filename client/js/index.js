@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './../css/index.css';
+import './../css/index.scss';
 import './../resources/favicon.ico';
 
 import App from './App';

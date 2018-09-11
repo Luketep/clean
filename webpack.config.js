@@ -1,6 +1,6 @@
 const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -30,10 +30,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
-      },
-      {
         test: /\.(ico|png|svg|jpg|gif)$/,
         use: [
           {
@@ -45,6 +41,16 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'sass-loader'
+          ]
+        })
       }
     ]
   },
@@ -53,9 +59,6 @@ module.exports = {
       template: './client/index.html',
       filename: './index.html'
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
+    new ExtractTextPlugin('./target/app.css')
   ]
 };
